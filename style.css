@@ -58,11 +58,11 @@ nav ul li a {
     height: 664px;
     background-position: center;
     background-size: cover;
-
+    font-family: 'Averia Serif Libre', cursive;
 }
 
 .main-visual {
-
+    
     background: rgba(0, 0, 0, .5) url(img/main_visual.png) 0 0 no-repeat;
     max-width: none;
     width: 100%;
@@ -80,16 +80,20 @@ img {
 }
 
 h1 {
+    text-shadow:3px 3px 14px #575025;
     float: left;
     color: #fff;
     font-size: 35px;
     display: flex;
     align-items: center;
+    font-family: 'Merienda One', cursive;
 }
 
 h2 {
+    text-shadow:3px 3px 14px #575025;
     font-size: 80px;
     color: #fff;
+    font-family: 'Merienda One', cursive;
 }
 
 h3 {
@@ -109,6 +113,7 @@ h3 {
     position: relative;
     height: 600px;
     display: flex;
+    font-family: 'Averia Serif Libre', cursive;
 }
 
 .Title-News {
@@ -128,6 +133,7 @@ h3 {
 .Band {
     display: flex;
     position: relative;
+    font-family: 'Averia Serif Libre', cursive;
 }
 
 .Title-Band {
