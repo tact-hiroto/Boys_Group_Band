@@ -19,8 +19,8 @@ $(function () {
     });
     $(window).scroll(function(){
         if($(document).scrollTop() > 550){
-            $(`.Title-News`).animate({
-                top:`-600px`,
+            $('.Title-News').animate({
+                top:'-600px',
                 opacity: 0
             },600);
             
@@ -28,17 +28,17 @@ $(function () {
     });
     $(window).scroll(function(){
         if($(document).scrollTop() > 1200){
-            $(`.Title-Band`).animate({
-                top:`-600px`,
+            $('.Title-Band').animate({
+                top:'-600px',
                 opacity: 0
             },600);
             
         }
     });
-        $(window).scroll(function(){
+    $(window).scroll(function(){
         if($(document).scrollTop() > 1800){
-            $(`.Title-Movie`).animate({
-                top:`-600px`,
+            $('.Title-Movie').animate({
+                top:'-600px',
                 opacity: 0
             },600);
             
