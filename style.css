@@ -63,11 +63,11 @@ nav ul li a {
 }
 
 .main-visual {
-    
+    z-index: 0;
     background: rgba(0, 0, 0, .5) url(img/main_visual.png) 0 0 no-repeat;
     max-width: none;
     width: 100%;
-    height: 500px;
+    height: 100%;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -116,7 +116,110 @@ h3 {
     display: flex;
     font-family: 'Averia Serif Libre', cursive;
     overflow: hidden;
+    
+    
+    
 }
+.News .Min-img-1 .box{
+    position: relative;
+    z-index: 1;
+}
+.News .Min-img-1 .box .Min-1 {
+  position: relative;
+  overflow: hidden;
+    z-index: 1;
+}
+.News .Min-img-1 .box .Min-1 img{
+  object-fit: cover;
+  transition: transform 2s;
+    z-index: 1;
+}
+
+.News .Min-img-1 .box:hover .Min-1 img {
+  transform: scale(1.2);
+    z-index: 1;
+}
+
+.News .Min-img-1 .box .details {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,.8);
+  transform: scaleY(0);
+  transition: transform .5s;
+    z-index: 1;
+}
+.News .Min-img-1 .box:hover .details {
+  transform: scaleY(1);
+    z-index: 1;
+}
+
+.News .Min-img-1 .box .details .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+    z-index: 1;
+}
+
+.News .box {
+  position: relative;
+    z-index: 1;
+}
+
+.News .box .Big-img-1 {
+  position: relative;
+  overflow: hidden;
+    z-index: 1;
+}
+
+.News .box .Big-img-1 img{
+  object-fit: cover;
+  transition: transform 2s;
+    z-index: 1;
+}
+
+.News .box:hover .Big-img-1 img {
+  transform: scale(1.2);
+    z-index: 1;
+}
+
+.News .box .details {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,.8);
+  transform: scaleY(0);
+  transition: transform .5s;
+    z-index: 1;
+}
+
+.News .box:hover .details {
+  transform: scaleY(1);
+    z-index: 1;
+}
+
+.News .box .details .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+    z-index: 1;
+}
+
+
+
+
+
+
 
 .Title-News {
     position: absolute;
@@ -129,9 +232,10 @@ h3 {
     justify-content: center;
     background-color: rgba(144, 202, 249, 0.85) ;
     overflow: hidden;
+    z-index: 2;
 }
 
-.Min-img-1 {}
+
 
 .Band {
     display: flex;
@@ -149,6 +253,7 @@ h3 {
     left:  0;
     display: flex;
     background-color: rgba(165, 214, 167, 0.85);
+    
 }
 .Movie{
     display: flex;
@@ -173,9 +278,7 @@ h3 {
     
 }
 
-.Min-img-1{
-    
-}
+
 
 
 
