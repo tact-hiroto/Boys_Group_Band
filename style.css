@@ -298,11 +298,13 @@ h3 {
     position: relative;
     z-index: 1;
 }
+
 .Band .Min-img-2 .box .Min-1 {
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
+
 .Band .Min-img-2 .box .details {
     position: absolute;
     top: 10px;
@@ -527,3 +529,63 @@ h3 {
     margin: 0 auto;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and ( max-width:479px )
+{
+    .Min-img-1{
+        display: none;
+    }
+    .Min-img-2{
+        display: none;
+    }
+    nav {
+    display: none;
+}
+    h1.title {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
