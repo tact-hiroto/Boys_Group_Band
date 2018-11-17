@@ -28,7 +28,6 @@ nav {
     margin-left: auto;
 }
 
-
 nav li {
     list-style-type: none;
     padding: none;
@@ -49,6 +48,12 @@ nav ul li a {
     position: relative;
     top: 164px;
     height: 664px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 2000px;
 }
 
 .Top {
@@ -78,6 +83,7 @@ nav ul li a {
 
 img {
     float: left;
+    object-fit: cover;
 }
 
 h1 {
@@ -104,13 +110,8 @@ h3 {
     color: white;
 }
 
-.banner {
-    position: relative;
-    width: 100%;
-    height: 2000px;
-}
-
 .News {
+    width: 100%;
     position: relative;
     height: 600px;
     display: flex;
@@ -119,10 +120,29 @@ h3 {
 
 }
 
+.Title-News {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(144, 202, 249, 0.85);
+    overflow: hidden;
+    z-index: 2;
+}
 
-.Min-img-1 {}
+.Big-img-1 {
+    width: 50% ;
+  
+}
 
-
+.Min-img-1 {
+    width: 50%;
+    
+}
 
 .News .box {
     position: relative;
@@ -222,9 +242,6 @@ h3 {
     z-index: 1;
 }
 
-
-
-
 .News .Min-img-1 .box .Min-2 {
     position: relative;
     overflow: hidden;
@@ -237,14 +254,10 @@ h3 {
     z-index: 1;
 }
 
-
 .News .Min-img-1 .box:hover .Min-2 img {
     transform: scale(1.2);
     z-index: 1;
 }
-
-
-
 
 .News .Min-img-1 .box .Min-3 {
     position: relative;
@@ -263,12 +276,6 @@ h3 {
     z-index: 1;
 }
 
-
-
-
-
-
-
 .News .Min-img-1 .box .Min-4 {
     position: relative;
     overflow: hidden;
@@ -286,13 +293,32 @@ h3 {
     z-index: 1;
 }
 
+.Band {
+    display: flex;
+    position: relative;
+    font-family: 'Averia Serif Libre', cursive;
+}
 
+.Title-Band {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    display: flex;
+    background-color: rgba(165, 214, 167, 0.85);
+    z-index: 2;
+}
 
+.Big-img-2 {
+    width: 50%;
+}
 
-
-
-
-
+.Min-img-2 {
+    width: 50%;
+}
 
 .Band .Min-img-2 .box {
     position: relative;
@@ -332,8 +358,6 @@ h3 {
     z-index: 1;
 }
 
-
-
 .Band .Min-img-2 .box .Min-5 {
     position: relative;
     overflow: hidden;
@@ -346,13 +370,10 @@ h3 {
     z-index: 1;
 }
 
-
 .Band .Min-img-2 .box:hover .Min-5 img {
     transform: scale(1.2);
     z-index: 1;
 }
-
-
 
 .Band .Min-img-2 .box .Min-6 {
     position: relative;
@@ -366,13 +387,10 @@ h3 {
     z-index: 1;
 }
 
-
 .Band .Min-img-2 .box:hover .Min-6 img {
     transform: scale(1.2);
     z-index: 1;
 }
-
-
 
 .Band .Min-img-2 .box .Min-7 {
     position: relative;
@@ -386,13 +404,10 @@ h3 {
     z-index: 1;
 }
 
-
 .Band .Min-img-2 .box:hover .Min-7 img {
     transform: scale(1.2);
     z-index: 1;
 }
-
-
 
 .Band .Min-img-2 .box .Min-8 {
     position: relative;
@@ -406,16 +421,10 @@ h3 {
     z-index: 1;
 }
 
-
 .Band .Min-img-2 .box:hover .Min-8 img {
     transform: scale(1.2);
     z-index: 1;
 }
-
-
-
-
-
 
 .Band .box {
     position: relative;
@@ -466,47 +475,6 @@ h3 {
     z-index: 1;
 }
 
-
-
-
-
-
-
-.Title-News {
-    position: absolute;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(144, 202, 249, 0.85);
-    overflow: hidden;
-    z-index: 2;
-}
-
-
-
-.Band {
-    display: flex;
-    position: relative;
-    font-family: 'Averia Serif Libre', cursive;
-}
-
-.Title-Band {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    display: flex;
-    background-color: rgba(165, 214, 167, 0.85);
-    z-index: 2;
-}
-
 .Movie {
     display: flex;
     position: relative;
@@ -526,6 +494,7 @@ h3 {
 }
 
 .movie-T {
+    width: 100%;
     margin: 0 auto;
 
 }
@@ -562,13 +531,30 @@ h3 {
 
 
 
-
+@media screen and ( min-width:480px )
+{
+    .sp {
+        display: none;
+    }
+}
 
 
 
 
 @media screen and ( max-width:479px )
 {
+    * {
+        margin: 0 ;
+        padding: 0 ;
+        
+    }
+    .Big-img-2{
+        width: 100%;
+    }
+    .Big-img-1{
+        width: 100%;
+    }
+    
     .Min-img-1{
         display: none;
     }
@@ -581,6 +567,14 @@ h3 {
     h1.title {
         display: none;
     }
+    .main-visual h2 {
+        display: none;
+    }
+    .pc {
+        display: none;
+    }
+    
+    
 }
 
 
