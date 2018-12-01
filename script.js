@@ -53,14 +53,14 @@ $(function () {
     
     $(window).load(function () {
         // 消えるタイミングはお好みで
-        $('.loading').delay(50000).fadeOut(4000);
+        $('.loading').delay(5000).fadeOut(4000);
     });
 
     // 10秒待っても読み込みが終わらない時は強制的にローディング画面をフェードアウト
     function stopload() {
-        $('.loading').delay(1000).fadeOut(700);
+        $('.loading').delay(1000).fadeOut(7000);
     }
-    setTimeout('stopload()', 10000);
+    setTimeout('stopload()', 1000);
     
     
     
