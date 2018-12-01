@@ -1,39 +1,26 @@
 $(function () {
-
     
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-
-
     $('.newsLink').on('click', function (e) {
         e.preventDefault();
         $('html, body').stop().animate({
             scrollTop: 600
         }, 800);
     });
+    
     $('.bandLink').on('click', function (e) {
         e.preventDefault();
         $('html, body').stop().animate({
             scrollTop: 1250
         }, 800);
     });
+    
     $('.movieLink').on('click', function (e) {
         e.preventDefault();
         $('html, body').stop().animate({
             scrollTop: 1810
         }, 800);
     });
+    
     $(window).scroll(function () {
         if ($(document).scrollTop() > 550) {
             $('.Title-News').animate({
@@ -43,6 +30,7 @@ $(function () {
 
         }
     });
+    
     $(window).scroll(function () {
         if ($(document).scrollTop() > 1200) {
             $('.Title-Band').animate({
@@ -52,6 +40,7 @@ $(function () {
 
         }
     });
+    
     $(window).scroll(function () {
         if ($(document).scrollTop() > 1800) {
             $('.Title-Movie').animate({
@@ -62,10 +51,9 @@ $(function () {
         }
     });
     
-    
     $(window).load(function () {
         // 消えるタイミングはお好みで
-        $('.loading').delay(15000).fadeOut(300);
+        $('.loading').delay(500).fadeOut(400);
     });
 
     // 10秒待っても読み込みが終わらない時は強制的にローディング画面をフェードアウト
