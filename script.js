@@ -1,5 +1,6 @@
 $(function () {
     
+    
     $('.newsLink').on('click', function (e) {
         e.preventDefault();
         $('html, body').stop().animate({
@@ -17,9 +18,18 @@ $(function () {
     $('.movieLink').on('click', function (e) {
         e.preventDefault();
         $('html, body').stop().animate({
-            scrollTop: 1810
+            scrollTop: 2010
         }, 800);
     });
+    
+    $('#slider').bxSlider({
+    ticker: true,
+    minSlides: 3,
+    maxSlides: 10,
+    slideWidth: 300,
+    slideMargin: 0,
+    speed: 50000
+  });
     
     $(window).scroll(function () {
         if ($(document).scrollTop() > 550) {
@@ -61,6 +71,7 @@ $(function () {
         $('.loading').delay(1000).fadeOut(7000);
     }
     setTimeout('stopload()', 1000);
+
     
     
     
