@@ -8,7 +8,6 @@
 body {
     width: 100vw;
     background: radial-gradient(#eee,#444);
-    overflow: hidden;
 }
 
 header {
@@ -89,7 +88,7 @@ nav ul li a {
 img {
     float: left;
     object-fit: cover;
-    
+
 }
 
 h1 {
@@ -111,7 +110,7 @@ h2 {
 
 h3 {
     width: 100%;
-    font-size: 150px;
+    font-size: 120px;
     text-align: center;
     vertical-align: middle;
     color: white;
@@ -143,12 +142,12 @@ h3 {
 
 .Big-img-1 {
     width: 50% ;
-  
+
 }
 
 .Min-img-1 {
     width: 50%;
-    
+
 }
 
 .News .box {
@@ -589,7 +588,7 @@ h3 {
     .loading span:nth-child(15) {
       animation: load 2.5s 1.4s infinite linear;
     }
-  
+
 
 
 @keyframes load {
@@ -644,11 +643,11 @@ h3 {
     * {
         margin: 0 ;
         padding: 0 ;
-        
+
     }
-    
-    
-    
+
+
+
     .Big-img-2{
         width: 100%;
     }
@@ -673,13 +672,6 @@ h3 {
     .pc {
         display: none;
     }
-    
-    
+
+
 }
-
-
-
-
-
-
-
