@@ -1,8 +1,3 @@
-@import "compass/css3";
-
-
-
-
 
 * {
     margin: 0;
@@ -11,7 +6,7 @@
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     background: radial-gradient(#eee,#444);
 }
 
@@ -23,6 +18,66 @@ header {
     display: flex;
     align-items: center;
 
+}
+
+.Top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 664px;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+.News {
+    width: 100%;
+    position: relative;
+    height: 600px;
+    display: flex;
+    font-family: 'Averia Serif Libre', cursive;
+    overflow: hidden;
+
+}
+
+.Band {
+    width: 100%;
+    display: flex;
+    position: relative;
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+.Movie {
+    width: 100%;
+    display: flex;
+    position: relative;
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+h1 {
+    text-shadow: 3px 3px 14px #575025;
+    float: left;
+    color: #fff;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    font-family: 'Merienda One', cursive;
+}
+
+h2 {
+    text-shadow: 3px 3px 14px #575025;
+    font-size: 80px;
+    color: #fff;
+    font-family: 'Merienda One', cursive;
+}
+
+h3 {
+    width: 100%;
+    font-size: 100px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
 }
 
 ul {
@@ -65,71 +120,6 @@ nav ul li a {
     height: 2000px;
 }
 
-.Top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 664px;
-    background-position: center;
-    background-size: cover;
-    font-family: 'Averia Serif Libre', cursive;
-}
-
-.main-visual {
-    width: 100%;
-    z-index: 0;
-    background: rgba(0, 0, 0, .5) url(img/main_visual.png) 0 0 no-repeat;
-    max-width: none;
-    height: 100%;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-}
-
-img {
-    float: left;
-    object-fit: cover;
-}
-
-h1 {
-    text-shadow: 3px 3px 14px #575025;
-    float: left;
-    color: #fff;
-    font-size: 35px;
-    display: flex;
-    align-items: center;
-    font-family: 'Merienda One', cursive;
-}
-
-h2 {
-    text-shadow: 3px 3px 14px #575025;
-    font-size: 80px;
-    color: #fff;
-    font-family: 'Merienda One', cursive;
-}
-
-h3 {
-    width: 100%;
-    font-size: 150px;
-    text-align: center;
-    vertical-align: middle;
-    color: white;
-}
-
-.News {
-    width: 100%;
-    position: relative;
-    height: 600px;
-    display: flex;
-    font-family: 'Averia Serif Libre', cursive;
-    overflow: hidden;
-
-}
-
 .Title-News {
     position: absolute;
     display: flex;
@@ -142,172 +132,6 @@ h3 {
     background-color: rgba(144, 202, 249, 0.85);
     overflow: hidden;
     z-index: 2;
-}
-
-.Big-img-1 {
-    width: 50% ;
-  
-}
-
-.Min-img-1 {
-    width: 50%;
-    
-}
-
-.News .box {
-    position: relative;
-    z-index: 1;
-}
-
-.News .box .Big-img-1 {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.News .box .Big-img-1 img {
-    object-fit: cover;
-    transition: transform 2s;
-    z-index: 1;
-}
-
-.News .box:hover .Big-img-1 img {
-    transform: scale(1.2);
-    z-index: 1;
-}
-
-.News .box .details {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, .8);
-    transform: scaleY(0);
-    transition: transform .5s;
-    z-index: 1;
-}
-
-.News .box:hover .details {
-    transform: scaleY(1);
-    z-index: 1;
-}
-
-.News .box .details .content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    padding: 10px;
-    color: #fff;
-    z-index: 1;
-}
-
-.News .Min-img-1 .box {
-    position: relative;
-    z-index: 1;
-}
-
-.News .Min-img-1 .box .Min-1 {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.News .Min-img-1 .box .Min-1 img {
-    object-fit: cover;
-    transition: transform 2s;
-    z-index: 1;
-}
-
-.News .Min-img-1 .box:hover .Min-1 img {
-    transform: scale(1.2);
-    z-index: 1;
-}
-
-.News .Min-img-1 .box .details {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, .8);
-    transform: scaleY(0);
-    transition: transform .5s;
-    z-index: 1;
-}
-
-.News .Min-img-1 .box:hover .details {
-    transform: scaleY(1);
-    z-index: 1;
-}
-
-.News .Min-img-1 .box .details .content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    padding: 10px;
-    color: #fff;
-    z-index: 1;
-}
-
-.News .Min-img-1 .box .Min-2 {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.News .Min-img-1 .box .Min-2 img {
-    object-fit: cover;
-    transition: transform 2s;
-    z-index: 1;
-}
-
-.News .Min-img-1 .box:hover .Min-2 img {
-    transform: scale(1.2);
-    z-index: 1;
-}
-
-.News .Min-img-1 .box .Min-3 {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.News .Min-img-1 .box .Min-3 img {
-    object-fit: cover;
-    transition: transform 2s;
-    z-index: 1;
-}
-
-.News .Min-img-1 .box:hover .Min-3 img {
-    transform: scale(1.2);
-    z-index: 1;
-}
-
-.News .Min-img-1 .box .Min-4 {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.News .Min-img-1 .box .Min-4 img {
-    object-fit: cover;
-    transition: transform 2s;
-    z-index: 1;
-}
-
-.News .Min-img-1 .box:hover .Min-4 img {
-    transform: scale(1.2);
-    z-index: 1;
-}
-
-.Band {
-    width: 100%;
-    display: flex;
-    position: relative;
-    font-family: 'Averia Serif Libre', cursive;
 }
 
 .Title-Band {
@@ -323,176 +147,6 @@ h3 {
     z-index: 2;
 }
 
-.Big-img-2 {
-    width: 50%;
-}
-
-.Min-img-2 {
-    width: 50%;
-}
-
-.Band .Min-img-2 .box {
-    position: relative;
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box .Min-1 {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box .details {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, .8);
-    transform: scaleY(0);
-    transition: transform .5s;
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box:hover .details {
-    transform: scaleY(1);
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box .details .content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    padding: 10px;
-    color: #fff;
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box .Min-5 {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box .Min-5 img {
-    object-fit: cover;
-    transition: transform 2s;
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box:hover .Min-5 img {
-    transform: scale(1.2);
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box .Min-6 {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box .Min-6 img {
-    object-fit: cover;
-    transition: transform 2s;
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box:hover .Min-6 img {
-    transform: scale(1.2);
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box .Min-7 {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box .Min-7 img {
-    object-fit: cover;
-    transition: transform 2s;
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box:hover .Min-7 img {
-    transform: scale(1.2);
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box .Min-8 {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box .Min-8 img {
-    object-fit: cover;
-    transition: transform 2s;
-    z-index: 1;
-}
-
-.Band .Min-img-2 .box:hover .Min-8 img {
-    transform: scale(1.2);
-    z-index: 1;
-}
-
-.Band .box {
-    position: relative;
-    z-index: 1;
-}
-
-.Band .box .Big-img-2 {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.Band .box .Big-img-2 img {
-    object-fit: cover;
-    transition: transform 2s;
-    z-index: 1;
-}
-
-.Band .box:hover .Big-img-2 img {
-    transform: scale(1.2);
-    z-index: 1;
-}
-
-.Band .box .details {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, .8);
-    transform: scaleY(0);
-    transition: transform .5s;
-    z-index: 1;
-}
-
-.Band .box:hover .details {
-    transform: scaleY(1);
-    z-index: 1;
-}
-
-.Band .box .details .content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    padding: 10px;
-    color: #fff;
-    z-index: 1;
-}
-
-.Movie {
-    width: 100%;
-    display: flex;
-    position: relative;
-    font-family: 'Averia Serif Libre', cursive;
-}
-
 .Title-Movie {
     height: 100%;
     width: 100%;
@@ -505,10 +159,291 @@ h3 {
     background-color: rgba(214, 165, 205, 0.85);
 }
 
-.movie-T {
-    width: 100%;
-    margin: 0 auto;
+.main-visual {
+    width: 100vw;
+    z-index: 0;
+    background: rgba(0, 0, 0, .5) url(img/main_visual.png) 0 0 no-repeat;
+    max-width: none;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
 
+
+
+
+
+
+
+img {
+    float: left;
+    object-fit: cover;
+}
+
+
+.News .box .Big-img-1 img {
+    object-fit: cover;
+    transition: transform 2s;
+}
+
+.News .box:hover .Big-img-1 img {
+    transform: scale(1.2);
+}
+
+.News .Min-img-1 .box .Min-1 img {
+    object-fit: cover;
+    transition: transform 2s;
+}
+
+.News .Min-img-1 .box:hover .Min-1 img {
+    transform: scale(1.2);
+}
+
+.News .Min-img-1 .box .Min-2 img {
+    object-fit: cover;
+    transition: transform 2s;
+}
+
+.News .Min-img-1 .box:hover .Min-2 img {
+    transform: scale(1.2);
+}
+
+.News .Min-img-1 .box .Min-3 img {
+    object-fit: cover;
+    transition: transform 2s;
+}
+
+.News .Min-img-1 .box:hover .Min-3 img {
+    transform: scale(1.2);
+}
+
+.News .Min-img-1 .box .Min-4 img {
+    object-fit: cover;
+    transition: transform 2s;
+}
+
+.News .Min-img-1 .box:hover .Min-4 img {
+    transform: scale(1.2);
+}
+
+
+.Band .Min-img-2 .box .Min-5 img {
+    object-fit: cover;
+    transition: transform 2s;
+}
+
+.Band .Min-img-2 .box:hover .Min-5 img {
+    transform: scale(1.2);
+}
+
+.Band .Min-img-2 .box .Min-6 img {
+    object-fit: cover;
+    transition: transform 2s;
+}
+
+.Band .Min-img-2 .box:hover .Min-6 img {
+    transform: scale(1.2);
+}
+
+.Band .Min-img-2 .box .Min-7 img {
+    object-fit: cover;
+    transition: transform 2s;
+}
+
+.Band .Min-img-2 .box:hover .Min-7 img {
+    transform: scale(1.2);
+}
+
+.Band .Min-img-2 .box .Min-8 img {
+    object-fit: cover;
+    transition: transform 2s;
+}
+
+.Band .Min-img-2 .box:hover .Min-8 img {
+    transform: scale(1.2);
+}
+
+
+.Band .box .Big-img-2 img {
+    object-fit: cover;
+    transition: transform 2s;
+}
+
+.Band .box:hover .Big-img-2 img {
+    transform: scale(1.2);
+}
+
+
+.Big-img-1 {
+    width: 50% ;
+}
+
+.News .box .Big-img-1 {
+    position: relative;
+    overflow: hidden;
+}
+
+.Min-img-1 {
+    width: 50%;
+}
+
+.Big-img-2 {
+    width: 50%;
+}
+
+.Band .box .Big-img-2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.Min-img-2 {
+    width: 50%;
+}
+
+
+.News .box {
+    position: relative;
+}
+
+.News .Min-img-1 .box {
+    position: relative;
+}
+
+.Band .box {
+    position: relative;
+}
+
+.Band .Min-img-2 .box {
+    position: relative;
+}
+
+
+.News .box .details {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, .8);
+    transform: scaleY(0);
+    transition: transform .5s;
+}
+
+.News .box:hover .details {
+    transform: scaleY(1);
+}
+
+.News .Min-img-1 .box .details {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, .8);
+    transform: scaleY(0);
+    transition: transform .5s;
+}
+
+.News .Min-img-1 .box:hover .details {
+    transform: scaleY(1);
+}
+
+.Band .Min-img-2 .box .details {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, .8);
+    transform: scaleY(0);
+    transition: transform .5s;
+}
+
+.Band .Min-img-2 .box:hover .details {
+    transform: scaleY(1);
+    z-index: 1;
+}
+
+
+.News .box .details .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.News .Min-img-1 .box .details .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.Band .Min-img-2 .box .details .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.Band .box .details .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+
+
+.News .Min-img-1 .box .Min-1 {
+    position: relative;
+    overflow: hidden;
+}
+
+.News .Min-img-1 .box .Min-2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.News .Min-img-1 .box .Min-3 {
+    position: relative;
+    overflow: hidden;
+}
+
+.News .Min-img-1 .box .Min-4 {
+    position: relative;
+    overflow: hidden;
+}
+
+.Band .Min-img-2 .box .Min-5 {
+    position: relative;
+    overflow: hidden;
+}
+
+.Band .Min-img-2 .box .Min-6 {
+    position: relative;
+    overflow: hidden;
+}
+
+.Band .Min-img-2 .box .Min-7 {
+    position: relative;
+    overflow: hidden;
+}
+
+.Band .Min-img-2 .box .Min-8 {
+    position: relative;
+    overflow: hidden;
 }
 
 
@@ -519,8 +454,10 @@ h3 {
 
 
 
-
-
+.movie-T {
+    width: 100%;
+    margin: 0 auto;
+}
 
 .loading {
   position: absolute;
@@ -590,8 +527,6 @@ h3 {
     .loading span:nth-child(15) {
       animation: load 2.5s 1.4s infinite linear;
     }
-  
-
 
 @keyframes load {
   0% {
@@ -613,23 +548,6 @@ h3 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and ( min-width:480px )
 {
     .sp {
@@ -645,15 +563,17 @@ h3 {
     * {
         margin: 0 ;
         padding: 0 ;
-        
+
     }
+
+
+
     .Big-img-2{
         width: 100%;
     }
     .Big-img-1{
         width: 100%;
     }
-    
     .Min-img-1{
         display: none;
     }
@@ -662,7 +582,7 @@ h3 {
     }
     nav {
     display: none;
-}
+    }
     h1.title {
         display: none;
     }
@@ -672,13 +592,6 @@ h3 {
     .pc {
         display: none;
     }
-    
-    
+
+
 }
-
-
-
-
-
-
-
