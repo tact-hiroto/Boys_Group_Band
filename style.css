@@ -20,6 +20,19 @@ header {
 
 }
 
+.main-visual {
+    width: 100vw;
+    z-index: 0;
+    background: rgba(0, 0, 0, .5) url(img/main_visual.png) 0 0 no-repeat;
+    max-width: none;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
 .Top {
     position: fixed;
     top: 0;
@@ -31,26 +44,51 @@ header {
     font-family: 'Averia Serif Libre', cursive;
 }
 
-
-.main-visual {
-    width: 100vw;
-    z-index: 0;
-    background: rgba(0, 0, 0, .5) url(img/main_visual.png) 0 0 no-repeat;
-    max-width: none;
-    height: 100%;
-    background-size: cover;
-    display: flex;
-    font-family: 'Averia Serif Libre', cursive;
-    overflow: hidden;
-}
-
-
 .News {
     width: 100%;
     position: relative;
     display:flex;
     height: 600px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
+
+.News .box {
+    position: relative;
+}
+
+.News .box .Big-img-1 .imgBox {
+  position: relative;
+  overflow: hidden;
+}
+
+.News .box .Big-img-1 .imgBox img {
+  object-fit: cover;
+  transition: transform 2s;
+}
+
+.News .box:hover .Big-img-1 .imgBox img {
+ transform: scale(1.2);
+}
+
+.News .box .details {
+  position: absolute;
+  background: rgba(0,0,0,.8);
+  transform: scaleY(0);
+  transition: transform .5s;
+}
+
+.News .box:hover .details {
+  transform: scaleY(1);
+}
+
+.News .box .details .content {
+  position: absolute;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
 
 .Band {
     width: 100%;
@@ -64,12 +102,6 @@ header {
     display: flex;
     position: relative;
     font-family: 'Averia Serif Libre', cursive;
-}
-img {
-    float: left;
-    object-fit: cover;
-
->>>>>>> 0a04f97fd7a8a89bf60e606b7cc377ab63f24c9b
 }
 
 h1 {
@@ -87,6 +119,7 @@ h2 {
     font-size: 80px;
     color: #fff;
     font-family: 'Merienda One', cursive;
+    padding-top: 80px;
 }
 
 h3 {
@@ -119,19 +152,19 @@ nav li {
 nav ul li {
     font-size: 33px;
     }
-.Big-img-1 {
-    width: 50% ;
-
-}
-
-.Min-img-1 {
-    width: 50%;
-    }
 
 nav ul li a {
     color: white;
     text-decoration: none;
 }
+
+.Big-img-1 {
+    width: 50% ;
+}
+
+.Min-img-1 {
+    width: 50%;
+    }
 
 .wrapper {
     width: 100%;
@@ -143,7 +176,6 @@ nav ul li a {
 .banner {
     position: relative;
     width: 100%;
-    height: 2000px;
 }
 
 .Title-News {
@@ -185,28 +217,22 @@ nav ul li a {
     background-color: rgba(214, 165, 205, 0.85);
 }
 
-.main-visual {
-    width: 100vw;
-    z-index: 0;
-    background: rgba(0, 0, 0, .5) url(img/main_visual.png) 0 0 no-repeat;
-    max-width: none;
-    height: 100%;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-}
-
 img {
     float: left;
     object-fit: cover;
 }
 
 
+
+
+
+
+
+
+
+
+/*
 .News .box .Big-img-1 img {
-    object-fit: cover;
     transition: transform 2s;
 }
 
@@ -215,7 +241,7 @@ img {
 }
 
 .News .Min-img-1 .box .Min-1 img {
-    object-fit: cover;
+
     transition: transform 2s;
 }
 
@@ -224,7 +250,7 @@ img {
 }
 
 .News .Min-img-1 .box .Min-2 img {
-    object-fit: cover;
+
     transition: transform 2s;
 }
 
@@ -233,7 +259,7 @@ img {
 }
 
 .News .Min-img-1 .box .Min-3 img {
-    object-fit: cover;
+
     transition: transform 2s;
 }
 
@@ -242,7 +268,7 @@ img {
 }
 
 .News .Min-img-1 .box .Min-4 img {
-    object-fit: cover;
+
     transition: transform 2s;
 }
 
@@ -252,7 +278,7 @@ img {
 
 
 .Band .Min-img-2 .box .Min-5 img {
-    object-fit: cover;
+
     transition: transform 2s;
 }
 
@@ -261,7 +287,7 @@ img {
 }
 
 .Band .Min-img-2 .box .Min-6 img {
-    object-fit: cover;
+
     transition: transform 2s;
 }
 
@@ -270,7 +296,7 @@ img {
 }
 
 .Band .Min-img-2 .box .Min-7 img {
-    object-fit: cover;
+
     transition: transform 2s;
 }
 
@@ -279,7 +305,7 @@ img {
 }
 
 .Band .Min-img-2 .box .Min-8 img {
-    object-fit: cover;
+
     transition: transform 2s;
 }
 
@@ -289,40 +315,42 @@ img {
 
 
 .Band .box .Big-img-2 img {
-    object-fit: cover;
+
     transition: transform 2s;
 }
 
 .Band .box:hover .Big-img-2 img {
     transform: scale(1.2);
 }
+*/
 
 
-.Big-img-1 {
-    width: 50% ;
-}
 
+
+/*
 .News .box .Big-img-1 {
     position: relative;
     overflow: hidden;
 }
+*/
 
-.Min-img-1 {
-    width: 50%;
-}
+
 
 .Big-img-2 {
     width: 50%;
 }
 
+/*
 .Band .box .Big-img-2 {
     position: relative;
     overflow: hidden;
 }
+*/
 
 .Min-img-2 {
     width: 50%;
 }
+/*
 
 
 .News .box {
@@ -343,6 +371,7 @@ img {
 
 
 .News .box .details {
+    width: 80%
     position: absolute;
     top: 10px;
     left: 10px;
@@ -356,7 +385,9 @@ img {
 .News .box:hover .details {
     transform: scaleY(1);
 }
+*/
 
+/*
 .News .Min-img-1 .box .details {
     position: absolute;
     top: 10px;
@@ -367,6 +398,8 @@ img {
     transform: scaleY(0);
     transition: transform .5s;
 }
+*/
+/*
 
 .News .Min-img-1 .box:hover .details {
     transform: scaleY(1);
@@ -385,7 +418,6 @@ img {
 
 .Band .Min-img-2 .box:hover .details {
     transform: scaleY(1);
-    z-index: 1;
 }
 
 
@@ -425,9 +457,7 @@ img {
     color: #fff;
 }
 
-.Movie {
-    width: 100%;
-    display: flex;
+.News .Min-img-1 .box .Min-1 {
     position: relative;
     overflow: hidden;
 }
@@ -466,6 +496,7 @@ img {
     position: relative;
     overflow: hidden;
 }
+*/
 
 
 .movie-T {
