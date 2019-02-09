@@ -21,13 +21,13 @@ $(function () {
     });
 
     $('#slider').bxSlider({
-    ticker: true,
-    minSlides: 3,
-    maxSlides: 10,
-    slideWidth: 300,
-    slideMargin: 0,
-    speed: 50000
-  });
+        ticker: true,
+        minSlides: 3,
+        maxSlides: 10,
+        slideWidth: 300,
+        slideMargin: 0,
+        speed: 50000
+    });
 
     $(window).scroll(function () {
         if ($(document).scrollTop() > 550) {
@@ -59,59 +59,53 @@ $(function () {
         }
     });
 
-    
-    
-    
+
+
+
     $(window).load(function () {
         $('.loading').delay(5000).fadeOut(4000);
     });
+
     function stopload() {
         $('.loading').delay(1000).fadeOut(7000);
     }
     setTimeout('stopload()', 1000);
-    
-    $( window ).scroll( function()
-	{
-		if( syncerTimeout == null )
-		{
-			syncerTimeout = setTimeout( function(){
 
-				var element = $( '#page-top' ) ;
+    $(window).scroll(function () {
+        if (syncerTimeout == null) {
+            syncerTimeout = setTimeout(function () {
 
-				var visible = element.is( ':visible' ) ;
+                var element = $('#page-top');
 
-				var now = $( window ).scrollTop() ;
+                var visible = element.is(':visible');
 
-				var under = $( 'body' ).height() - ( now + $(window).height() ) ;
+                var now = $(window).scrollTop();
+
+                var under = $('body').height() - (now + $(window).height());
 
 
-				if( now > 1500 && 200 < under )
-				{
-					if( !visible )
-					{
-						element.fadeIn( 'slow' ) ;
-					}
-				}
+                if (now > 1500 && 200 < under) {
+                    if (!visible) {
+                        element.fadeIn('slow');
+                    }
+                } else if (visible) {
 
-				
-				else if( visible )
-				{
-					
-					element.fadeOut( 'slow' ) ;
-				}
+                    element.fadeOut('slow');
+                }
 
-			
-				syncerTimeout = null ;
-			} , 1000 ) ;
-		}
-	} ) ;
 
-	$( '#move-page-top' ).click(
-		function()
-		{
-			$( 'html,body' ).animate( {scrollTop:0} , 'slow' ) ;
-		}
-	) ;
+                syncerTimeout = null;
+            }, 1000);
+        }
+    });
+
+    $('#move-page-top').click(
+        function () {
+            $('html,body').animate({
+                scrollTop: 0
+            }, 'slow');
+        }
+    );
 
 
 
