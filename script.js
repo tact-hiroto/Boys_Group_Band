@@ -59,16 +59,59 @@ $(function () {
         }
     });
 
+    
+    
+    
     $(window).load(function () {
-        // 消えるタイミングはお好みで
         $('.loading').delay(5000).fadeOut(4000);
     });
-
-    // 10秒待っても読み込みが終わらない時は強制的にローディング画面をフェードアウト
     function stopload() {
         $('.loading').delay(1000).fadeOut(7000);
     }
     setTimeout('stopload()', 1000);
+    
+    $( window ).scroll( function()
+	{
+		if( syncerTimeout == null )
+		{
+			syncerTimeout = setTimeout( function(){
+
+				var element = $( '#page-top' ) ;
+
+				var visible = element.is( ':visible' ) ;
+
+				var now = $( window ).scrollTop() ;
+
+				var under = $( 'body' ).height() - ( now + $(window).height() ) ;
+
+
+				if( now > 1500 && 200 < under )
+				{
+					if( !visible )
+					{
+						element.fadeIn( 'slow' ) ;
+					}
+				}
+
+				
+				else if( visible )
+				{
+					
+					element.fadeOut( 'slow' ) ;
+				}
+
+			
+				syncerTimeout = null ;
+			} , 1000 ) ;
+		}
+	} ) ;
+
+	$( '#move-page-top' ).click(
+		function()
+		{
+			$( 'html,body' ).animate( {scrollTop:0} , 'slow' ) ;
+		}
+	) ;
 
 
 
