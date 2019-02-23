@@ -303,6 +303,7 @@ nav ul li a {
     left: 0;
     display: flex;
     background-color: rgba(214, 165, 205, 0.85);
+    z-index: 2;
 }
 
 img {
