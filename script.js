@@ -40,7 +40,7 @@ $(function () {
             $('.Title-News').animate({
                 top: '-600px',
                 opacity: 0 ,
-                zIndex: 0
+                zIndex: -1
             }, 600);
 
         }
@@ -51,7 +51,7 @@ $(function () {
             $('.Title-Band').animate({
                 top: '-600px',
                 opacity: 0 ,
-                zindex: 0
+                zIndex: -1
             }, 600);
 
         }
@@ -62,7 +62,7 @@ $(function () {
             $('.Title-Movie').animate({
                 top: '-600px',
                 opacity: 0 ,
-                zindex: 0
+                zIndex: -1
             }, 600);
 
         }
@@ -93,7 +93,7 @@ $(function () {
                     under = $('body').height() - (now + $(window).height());
 
 
-                if (now > 1500 && 0 < under) {
+                if (now > 1500 ) {
                     if (!visible) {
                         element.fadeIn('slow');
                     }
