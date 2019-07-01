@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.band_mender{
+    width: 100%;
+    height: 300px;
+    background-color: #30140D;
+}
+.rogo{
+    width: 20vw;
+    height: 20vw;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    float: left;
+}
+.mender{
+    width: 70vw;
+    height: 300px;
+/*    background-color: gray;*/
+    float: left;
+}
+h1{
+    height: 100%;
+    display: inline-block;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
