@@ -19,6 +19,45 @@ header {
     z-index: 2;
 }
 
+
+
+.newsLink{
+    clear: rgb(255, 255, 255);
+}
+
+.newsLink:hover{
+    color: gray;
+}
+.bandLink{
+    clear: #fff;
+}
+.bandLink:hover{
+    color: gray;
+}
+
+.movieLink{
+    clear: #fff;
+}
+
+.movieLink:hover{
+    color: gray;
+}
+
+.galleryLink{
+    color: #fff;
+}
+.galleryLink:hover{
+    color: gray;
+}
+
+.memderLink{
+    color: #fff;
+}
+
+.memderLink:hover{
+    color: gray;
+}
+
 .main-visual {
     width: 100vw;
     z-index: -1;
@@ -202,18 +241,58 @@ header {
     font-family: 'Averia Serif Libre', cursive;
 }
 
+.Gallery {
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-left: solid 4px #fff;
+  border-right: solid 4px #fff;
+  color: #fff;
+  background: #444;
+  transition: .4s;
+}
+
+.Gallery:hover{
+    background: #f85316;
+    color: #fff;
+}
+
+.Bands {
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-left: solid 4px #fff;
+  border-right: solid 4px #fff;
+  color: #fff;
+  background: #444;
+  transition: .4s;
+}
+
+.Bands:hover{
+    background: #11a211;
+    color: #fff;
+}
+
 h1 {
     text-shadow: 3px 3px 14px #575025;
     float: left;
     color: #fff;
-    font-size: 35px;
+    font-size: 55px;
     display: flex;
     align-items: center;
     font-family: 'Merienda One', cursive;
 }
 
 h2 {
-    text-shadow: 3px 3px 14px #575025;
+    text-shadow: 4px 4px 14px #796d23;
     font-size: 80px;
     color: #fff;
     font-family: 'Merienda One', cursive;
@@ -231,7 +310,7 @@ h3 {
 
 h4 {
     width: 100%;
-    font-size: 35px;
+    font-size: 30px;
     clear: white;
     text-align: center;
     font-family: 'Merienda One', cursive;
@@ -245,6 +324,9 @@ p {
 ul {
     display: -webkit-flex;
     display: flex;
+    margin-right: 40px;
+    border: solid 2px #fff;
+    border-radius: 8px;
 }
 
 nav {
@@ -256,7 +338,7 @@ nav li {
     list-style-type: none;
     padding: none;
     float: right;
-    padding: 45px;
+    padding: 10px;
 }
 
 nav ul li {
