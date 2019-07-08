@@ -1,4 +1,10 @@
+/*jslint browser: true*/
+/*global $*/
+
+var syncerTimeout = null;//グローバル変数
+
 $(function () {
+    "use strict";
     $('.newsLink').on('click', function (e) {
         e.preventDefault();
         $('html, body').stop().animate({
@@ -33,7 +39,8 @@ $(function () {
         if ($(document).scrollTop() > 550) {
             $('.Title-News').animate({
                 top: '-600px',
-                opacity: 0
+                opacity: 0 ,
+                zIndex: -1
             }, 600);
 
         }
@@ -43,7 +50,8 @@ $(function () {
         if ($(document).scrollTop() > 1200) {
             $('.Title-Band').animate({
                 top: '-600px',
-                opacity: 0
+                opacity: 0 ,
+                zIndex: -1
             }, 600);
 
         }
@@ -53,7 +61,8 @@ $(function () {
         if ($(document).scrollTop() > 1800) {
             $('.Title-Movie').animate({
                 top: '-600px',
-                opacity: 0
+                opacity: 0 ,
+                zIndex: -1
             }, 600);
 
         }
@@ -69,22 +78,22 @@ $(function () {
     function stopload() {
         $('.loading').delay(1000).fadeOut(7000);
     }
-    setTimeout('stopload()', 1000);
+    setTimeout(stopload(), 1000);
 
     $(window).scroll(function () {
-        if (syncerTimeout == null) {
+        if (syncerTimeout === null) {
             syncerTimeout = setTimeout(function () {
 
-                var element = $('#page-top');
+                var element = $('#page-top'),
 
-                var visible = element.is(':visible');
+                    visible = element.is(':visible'),
 
-                var now = $(window).scrollTop();
+                    now = $(window).scrollTop(),
 
-                var under = $('body').height() - (now + $(window).height());
+                    under = $('body').height() - (now + $(window).height());
 
 
-                if (now > 1500 && 200 < under) {
+                if (now > 1500 ) {
                     if (!visible) {
                         element.fadeIn('slow');
                     }

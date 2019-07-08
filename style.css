@@ -16,12 +16,51 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
+    z-index: 2;
+}
 
+
+
+.newsLink{
+    clear: rgb(255, 255, 255);
+}
+
+.newsLink:hover{
+    color: gray;
+}
+.bandLink{
+    clear: #fff;
+}
+.bandLink:hover{
+    color: gray;
+}
+
+.movieLink{
+    clear: #fff;
+}
+
+.movieLink:hover{
+    color: gray;
+}
+
+.galleryLink{
+    color: #fff;
+}
+.galleryLink:hover{
+    color: gray;
+}
+
+.memderLink{
+    color: #fff;
+}
+
+.memderLink:hover{
+    color: gray;
 }
 
 .main-visual {
     width: 100vw;
-    z-index: 0;
+    z-index: -1;
     background: rgba(0, 0, 0, .5) url(img/main_visual.png) 0 0 no-repeat;
     max-width: none;
     height: 100%;
@@ -50,32 +89,45 @@ header {
     height: 600px;
     flex-direction: row;
     flex-wrap: wrap;
+    font-family: 'Averia Serif Libre', cursive;
 }
 
 .News .box {
     position: relative;
+    width: 50%;
 }
 
-.News .box .Big-img-1 .imgBox {
+.News .box .News-Big .imgBox {
     position: relative;
     overflow: hidden;
 }
 
-.News .box .Big-img-1 .imgBox img {
+.News .box .News-Big .imgBox img {
     object-fit: cover;
     transition: transform 2s;
 }
 
-.News .box:hover .Big-img-1 .imgBox img {
+.News .box:hover .News-Big .imgBox img {
     transform: scale(1.2);
+}
+
+.News .News-Small {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.News .News-Small .box {
+    width: 50%;
+    height: 50%;
 }
 
 .News .box .details {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
     background: rgba(0, 0, 0, .8);
     transform: scaleY(0);
     transition: transform .5s;
@@ -87,17 +139,99 @@ header {
 
 .News .box .details .content {
     position: absolute;
+    top: 60%;
     transform: translateY(-50%);
     text-align: center;
     color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
 }
 
+.News .box .details .content h2 {
+    text-align: center;
+    top: 30px;
+}
+
+.News .box .details .content p {
+    text-align: center;
+    padding-top: 30px;
+}
 
 .Band {
     width: 100%;
     display: flex;
     position: relative;
+    height: 600px;
+    flex-direction: row;
+    flex-wrap: wrap;
     font-family: 'Averia Serif Libre', cursive;
+}
+
+.Band .box {
+    position: relative;
+    width: 50%;
+}
+
+.Band .box .Band-Big .imgBox {
+    position: relative;
+    overflow: hidden;
+}
+
+.Band .box .Band-Big .imgBox img {
+    object-fit: cover;
+    transition: transform 2s;
+}
+
+.Band .box:hover .Band-Big .imgBox img {
+    transform: scale(1.2);
+}
+
+.Band .Band-Small {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Band .Band-Small .box {
+    width: 50%;
+    height: 50%;
+}
+
+.Band .box .details {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    background: rgba(0, 0, 0, .8);
+    transform: scaleY(0);
+    transition: transform .5s;
+}
+
+.Band .box:hover .details {
+    transform: scaleY(1);
+}
+
+.Band .box .details .content {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+}
+
+.Band .box .details .content h2 {
+    text-align: center;
+    top: 30px;
+}
+
+.Band .box .details .content p {
+    text-align: center;
+    padding-top: 30px;
 }
 
 .Movie {
@@ -107,18 +241,58 @@ header {
     font-family: 'Averia Serif Libre', cursive;
 }
 
+.Gallery {
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-left: solid 4px #fff;
+  border-right: solid 4px #fff;
+  color: #fff;
+  background: #444;
+  transition: .4s;
+}
+
+.Gallery:hover{
+    background: #f85316;
+    color: #fff;
+}
+
+.Bands {
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-left: solid 4px #fff;
+  border-right: solid 4px #fff;
+  color: #fff;
+  background: #444;
+  transition: .4s;
+}
+
+.Bands:hover{
+    background: #11a211;
+    color: #fff;
+}
+
 h1 {
     text-shadow: 3px 3px 14px #575025;
     float: left;
     color: #fff;
-    font-size: 35px;
+    font-size: 55px;
     display: flex;
     align-items: center;
     font-family: 'Merienda One', cursive;
 }
 
 h2 {
-    text-shadow: 3px 3px 14px #575025;
+    text-shadow: 4px 4px 14px #796d23;
     font-size: 80px;
     color: #fff;
     font-family: 'Merienda One', cursive;
@@ -134,10 +308,25 @@ h3 {
     color: white;
 }
 
+h4 {
+    width: 100%;
+    font-size: 30px;
+    clear: white;
+    text-align: center;
+    font-family: 'Merienda One', cursive;
+}
+
+p {
+    font-family: 'Merienda One', cursive;
+    font-size: 22px;
+}
+
 ul {
     display: -webkit-flex;
     display: flex;
-
+    margin-right: 40px;
+    border: solid 2px #fff;
+    border-radius: 8px;
 }
 
 nav {
@@ -149,7 +338,7 @@ nav li {
     list-style-type: none;
     padding: none;
     float: right;
-    padding: 45px;
+    padding: 10px;
 }
 
 nav ul li {
@@ -161,19 +350,12 @@ nav ul li a {
     text-decoration: none;
 }
 
-.Big-img-1 {
-    width: 50%;
-}
-
-.Min-img-1 {
-    width: 50%;
-}
-
 .wrapper {
     width: 100%;
     position: relative;
     top: 164px;
     height: 664px;
+    z-index: -1;
 }
 
 .banner {
@@ -218,6 +400,7 @@ nav ul li a {
     left: 0;
     display: flex;
     background-color: rgba(214, 165, 205, 0.85);
+    z-index: 2;
 }
 
 img {
@@ -225,280 +408,7 @@ img {
     object-fit: cover;
 }
 
-
-
-
-
-
-
-
-
-
-/*
-.News .box .Big-img-1 img {
-    transition: transform 2s;
-}
-
-.News .box:hover .Big-img-1 img {
-    transform: scale(1.2);
-}
-
-.News .Min-img-1 .box .Min-1 img {
-
-    transition: transform 2s;
-}
-
-.News .Min-img-1 .box:hover .Min-1 img {
-    transform: scale(1.2);
-}
-
-.News .Min-img-1 .box .Min-2 img {
-
-    transition: transform 2s;
-}
-
-.News .Min-img-1 .box:hover .Min-2 img {
-    transform: scale(1.2);
-}
-
-.News .Min-img-1 .box .Min-3 img {
-
-    transition: transform 2s;
-}
-
-.News .Min-img-1 .box:hover .Min-3 img {
-    transform: scale(1.2);
-}
-
-.News .Min-img-1 .box .Min-4 img {
-
-    transition: transform 2s;
-}
-
-.News .Min-img-1 .box:hover .Min-4 img {
-    transform: scale(1.2);
-}
-
-
-.Band .Min-img-2 .box .Min-5 img {
-
-    transition: transform 2s;
-}
-
-.Band .Min-img-2 .box:hover .Min-5 img {
-    transform: scale(1.2);
-}
-
-.Band .Min-img-2 .box .Min-6 img {
-
-    transition: transform 2s;
-}
-
-.Band .Min-img-2 .box:hover .Min-6 img {
-    transform: scale(1.2);
-}
-
-.Band .Min-img-2 .box .Min-7 img {
-
-    transition: transform 2s;
-}
-
-.Band .Min-img-2 .box:hover .Min-7 img {
-    transform: scale(1.2);
-}
-
-.Band .Min-img-2 .box .Min-8 img {
-
-    transition: transform 2s;
-}
-
-.Band .Min-img-2 .box:hover .Min-8 img {
-    transform: scale(1.2);
-}
-
-
-.Band .box .Big-img-2 img {
-
-    transition: transform 2s;
-}
-
-.Band .box:hover .Big-img-2 img {
-    transform: scale(1.2);
-}
-*/
-
-/*
-.News .box .Big-img-1 {
-    position: relative;
-    overflow: hidden;
-}
-*/
-
-.Big-img-2 {
-    width: 50%;
-}
-
-/*
-.Band .box .Big-img-2 {
-    position: relative;
-    overflow: hidden;
-}
-*/
-
-.Min-img-2 {
-    width: 50%;
-}
-
-/*
-
-
-.News .box {
-    position: relative;
-}
-
-.News .Min-img-1 .box {
-    position: relative;
-}
-
-.Band .box {
-    position: relative;
-}
-
-.Band .Min-img-2 .box {
-    position: relative;
-}
-
-
-.News .box .details {
-    width: 80%
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, .8);
-    transform: scaleY(0);
-    transition: transform .5s;
-}
-
-.News .box:hover .details {
-    transform: scaleY(1);
-}
-*/
-
-/*
-.News .Min-img-1 .box .details {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, .8);
-    transform: scaleY(0);
-    transition: transform .5s;
-}
-*/
-
-/*
-
-.News .Min-img-1 .box:hover .details {
-    transform: scaleY(1);
-}
-
-.Band .Min-img-2 .box .details {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, .8);
-    transform: scaleY(0);
-    transition: transform .5s;
-}
-
-.Band .Min-img-2 .box:hover .details {
-    transform: scaleY(1);
-}
-
-
-.News .box .details .content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    padding: 10px;
-    color: #fff;
-}
-
-.News .Min-img-1 .box .details .content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    padding: 10px;
-    color: #fff;
-}
-
-.Band .Min-img-2 .box .details .content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    padding: 10px;
-    color: #fff;
-}
-
-.Band .box .details .content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    padding: 10px;
-    color: #fff;
-}
-
-.News .Min-img-1 .box .Min-1 {
-    position: relative;
-    overflow: hidden;
-}
-
-.News .Min-img-1 .box .Min-2 {
-    position: relative;
-    overflow: hidden;
-}
-
-.News .Min-img-1 .box .Min-3 {
-    position: relative;
-    overflow: hidden;
-}
-
-.News .Min-img-1 .box .Min-4 {
-    position: relative;
-    overflow: hidden;
-}
-
-.Band .Min-img-2 .box .Min-5 {
-    position: relative;
-    overflow: hidden;
-}
-
-.Band .Min-img-2 .box .Min-6 {
-    position: relative;
-    overflow: hidden;
-}
-
-.Band .Min-img-2 .box .Min-7 {
-    position: relative;
-    overflow: hidden;
-}
-
-.Band .Min-img-2 .box .Min-8 {
-    position: relative;
-    overflow: hidden;
-}
-*/
-
-.movie-T {
+.Movie-youtude {
     width: 100%;
     margin: 0 auto;
 }
@@ -607,58 +517,6 @@ img {
     }
 }
 
-
-
-@media screen and ( min-width:480px) {
-    .sp {
-        display: none;
-    }
-}
-
-
-
-
-@media screen and ( max-width:479px) {
-    * {
-        margin: 0;
-        padding: 0;
-
-    }
-
-
-
-    .Big-img-2 {
-        width: 100%;
-    }
-    .Big-img-1 {
-        width: 100%;
-    }
-    .Min-img-1 {
-        display: none;
-    }
-    .Min-img-2 {
-        display: none;
-    }
-    nav {
-        display: none;
-    }
-    h1.title {
-        display: none;
-    }
-    .main-visual h2 {
-        display: none;
-    }
-    .pc {
-        display: none;
-    }
-
-    .Show {
-        display: none;
-    }
-}
-
-
-
 .page-top {
     margin: 0;
     padding: 0;
@@ -674,6 +532,7 @@ img {
 }
 
 .move-page-top {
+    z-index: 3;
     display: block;
     background: #4E342E;
     width: 50px;
@@ -691,4 +550,68 @@ img {
 
 .move-page-top:hover {
     opacity: 0.85;
+}
+
+@media screen and ( min-width:480px) {
+    .sp {
+        display: none;
+    }
+}
+
+@media screen and ( max-width:479px) {
+    .News {
+    width: 100%;
+    position: relative;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Averia Serif Libre', cursive;
+}
+    .Band {
+    width: 100%;
+    display: flex;
+    position: relative;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Averia Serif Libre', cursive;
+}
+    .Band .box {
+        width: 100%;
+    }
+    .News .box {
+        width: 100%;
+    }
+    .News .News-Small {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    }   
+    .Band .Band-Small {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    }
+    
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    nav {
+        display: none;
+    }
+    h1.title {
+        display: none;
+    }
+    .main-visual h2 {
+        display: none;
+    }
+    .pc {
+        display: none;
+    }
+    .Show {
+        display: none;
+    }
 }
