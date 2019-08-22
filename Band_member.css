@@ -38,7 +38,7 @@ body{
 
 .band_mender{
     width: 100%;
-    height: 310px;
+    height: 370px;
     background-color: #30140D;
 }
 .rogo{
@@ -80,7 +80,7 @@ h1{
     background-color: rgba(245, 86, 123, 0.88);
 }
 .Ourface{
-    height: 310px;
+    height: 370px;
     padding: 5px;
   page-break-inside: avoid;
   break-inside: avoid;

@@ -5,7 +5,7 @@
 }
 
 body {
-    width: 100vw;
+    width: 98.75vw;
     background: radial-gradient(#eee, #444);
 }
 
@@ -13,7 +13,7 @@ header {
     background-color: #30140D;
     height: 164px;
     display: table;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     z-index: 2;
@@ -559,6 +559,10 @@ img {
 }
 
 @media screen and ( max-width:479px) {
+    body {
+    width: 100vw;
+    background: radial-gradient(#eee, #444);
+}
     .News {
     width: 100%;
     position: relative;
