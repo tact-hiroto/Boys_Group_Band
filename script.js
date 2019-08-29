@@ -8,7 +8,7 @@ $(function () {
     $('.newsLink').on('click', function (e) {
         e.preventDefault();
         $('html, body').stop().animate({
-            scrollTop: 600
+            scrollTop: 700
         }, 800);
     });
 
@@ -22,10 +22,24 @@ $(function () {
     $('.movieLink').on('click', function (e) {
         e.preventDefault();
         $('html, body').stop().animate({
-            scrollTop: 2010
+            scrollTop: 2050
         }, 800);
     });
-
+    
+    $('.bandLinkv2').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: 2630
+        }, 800);
+    });
+    
+    $('.movieLinkv2').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: 3200
+        }, 800);
+    });
+    
     $('#slider').bxSlider({
         ticker: true,
         minSlides: 3,
