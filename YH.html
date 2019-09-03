@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery lightGallery demo</title>
+    <link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Merienda+One" rel="stylesheet">
+    <style>
+        body {
+            background-color: #152836
+        }
+
+        .home{
+            
+        }
+
+        .demo-gallery {
+            
+            color: rgba(0, 0, 0, 0);
+        }
+
+        .demo-gallery>ul {
+            margin-bottom: 0;
+        }
+
+        .demo-gallery>ul>li {
+            float: left;
+            margin-bottom: 15px;
+/*            margin-right: 20px;*/
+            margin-left: 10px;
+            width: 200px;
+        }
+
+        .demo-gallery>ul>li a {
+            border: 3px solid rgba(0, 0, 0, 0);
+            border-radius: 3px;
+            display: block;
+            overflow: hidden;
+            position: relative;
+            float: left;
+        }
+
+        .demo-gallery>ul>li a>img {
+            -webkit-transition: -webkit-transform 0.15s ease 0s;
+            -moz-transition: -moz-transform 0.15s ease 0s;
+            -o-transition: -o-transform 0.15s ease 0s;
+            transition: transform 0.15s ease 0s;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+            height: 100%;
+            width: 100%;
+        }
+
+        .demo-gallery>ul>li a:hover>img {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        .demo-gallery>ul>li a:hover .demo-gallery-poster>img {
+            opacity: 1;
+        }
+
+        .demo-gallery>ul>li a .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.1);
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            -webkit-transition: background-color 0.15s ease 0s;
+            -o-transition: background-color 0.15s ease 0s;
+            transition: background-color 0.15s ease 0s;
+        }
+
+        .demo-gallery>ul>li a .demo-gallery-poster>img {
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            -webkit-transition: opacity 0.3s ease 0s;
+            -o-transition: opacity 0.3s ease 0s;
+            transition: opacity 0.3s ease 0s;
+        }
+
+        .demo-gallery>ul>li a:hover .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .demo-gallery .justified-gallery>a>img {
+            -webkit-transition: -webkit-transform 0.15s ease 0s;
+            -moz-transition: -moz-transform 0.15s ease 0s;
+            -o-transition: -o-transform 0.15s ease 0s;
+            transition: transform 0.15s ease 0s;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+            height: 100%;
+            width: 100%;
+        }
+
+        .demo-gallery .justified-gallery>a:hover>img {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        .demo-gallery .justified-gallery>a:hover .demo-gallery-poster>img {
+            opacity: 1;
+        }
+
+        .demo-gallery .justified-gallery>a .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.1);
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            -webkit-transition: background-color 0.15s ease 0s;
+            -o-transition: background-color 0.15s ease 0s;
+            transition: background-color 0.15s ease 0s;
+        }
+
+        .demo-gallery .justified-gallery>a .demo-gallery-poster>img {
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            -webkit-transition: opacity 0.3s ease 0s;
+            -o-transition: opacity 0.3s ease 0s;
+            transition: opacity 0.3s ease 0s;
+        }
+
+        .demo-gallery .justified-gallery>a:hover .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .demo-gallery .video .demo-gallery-poster img {
+            height: 48px;
+            margin-left: -24px;
+            margin-top: -24px;
+            opacity: 0.8;
+            width: 48px;
+        }
+
+        .demo-gallery.dark>ul>li a {
+            border: 3px solid #04070a;
+        }
+
+        .home .demo-gallery {
+            padding-bottom: 80px;
+        }
+
+        .homev2 {
+            text-align: center;
+            height: 31px;
+            padding-top: 10px;
+        }
+
+        .hbox {
+            font-size: 35px;
+            font-family: 'Averia Serif Libre', cursive;
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+            border: solid 1px #fff;
+            border-radius: 8px;
+            background-color: gray;
+        }
+
+        .hbox {
+            transition: .5s;
+        }
+
+        .hbox:hover {
+            color: wheat;
+            background-color: rgba(61, 37, 248, 0.58);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="homev2">
+        <a href="index.html" class="hbox">Home</a>
+        <a href="Gallery.html" class="hbox">BandNews</a>
+    </div>
+    <div class="home">
+        <div class="demo-gallery">
+            <ul id="lightgallery" class="list-unstyled row">
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/000-1.png 375, img4/000-2.png 480, img4/000-4.png 800" data-src="img4/000-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/000-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/001-1.png 375, img4/001-2.png 480, img4/001-4.png 800" data-src="img4/001-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/001-0.png" alt="Thumb-3">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/002-1.png 375, img4/002-2.png 480, img4/002-4.png 800" data-src="img4/002-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/002-0.png" alt="Thumb-4">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/003-1.png 375, img4/003-2.png 480, img4/003-4.png 800" data-src="img4/003-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/003-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/004-1.png 375, img4/004-2.png 480, img4/004-4.png 800" data-src="img4/004-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/004-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/007-1.png 375, img4/007-2.png 480, img4/007-4.png 800" data-src="img4/007-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/007-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/008-1.png 375, img4/008-2.png 480, img4/008-4.png 800" data-src="img4/008-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/008-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/009-1.png 375, img4/009-2.png 480, img4/009-4.png 800" data-src="img4/009-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/009-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/010-1.png 375, img4/010-2.png 480, img4/010-4.png 800" data-src="img4/010-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/010-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/011-1.png 375, img4/011-2.png 480, img4/011-4.png 800" data-src="img4/011-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/011-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/012-1.png 375, img4/012-2.png 480, img4/012-4.png 800" data-src="img4/012-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/012-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/013-1.png 375, img4/013-2.png 480, img4/013-4.png 800" data-src="img4/013-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/013-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/014-1.png 375, img4/014-2.png 480, img4/014-4.png 800" data-src="img4/014-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/014-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/015-1.png 375, img4/015-2.png 480, img4/015-4.png 800" data-src="img4/015-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/015-0.png" alt="Thumb-1">
+                    </a>
+                
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/018-1.png 375, img4/018-2.png 480, img4/018-4.png 800" data-src="img4/018-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/018-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/019-1.png 375, img4/019-2.png 480, img4/019-4.png 800" data-src="img4/019-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/019-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/020-1.png 375, img4/020-2.png 480, img4/020-4.png 800" data-src="img4/020-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/020-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/021-1.png 375, img4/021-2.png 480, img4/021-4.png 800" data-src="img4/021-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/021-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/022-1.png 375, img4/022-2.png 480, img4/022-4.png 800" data-src="img4/022-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/022-0.png" alt="Thumb-1">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/026-1.png 375, img4/026-2.png 480, img4/026-4.png 800" data-src="img4/026-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/026-0.png" alt="Thumb-2">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/0001-1.png 375, img4/0001-2.png 480, img4/0001-4.png 800" data-src="img4/0001-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/0001-0.png" alt="Thumb-2">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/023-1.png 375, img4/023-2.png 480, img4/023-4.png 800" data-src="img4/023-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/023-0.png" alt="Thumb-2">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/024-1.png 375, img4/024-2.png 480, img4/024-4.png 800" data-src="img4/024-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/024-0.png" alt="Thumb-2">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img4/025-1.png 375, img4/025-2.png 480, img4/025-4.png 800" data-src="img4/025-3.png" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                    <a href="">
+                        <img class="img-responsive" src="img4/025-0.png" alt="Thumb-2">
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
+        <script>
+            lightGallery(document.getElementById('lightgallery'));
+
+        </script>
+    </div>
+</body>
+
+</html>
